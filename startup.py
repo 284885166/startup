@@ -1,8 +1,9 @@
 import subprocess
 import sys
-
+import os
+DIR = sys.path[0]
 def getCmds():
-	file = open('config.txt', 'r')
+	file = open(DIR + '/config.txt', 'r')
 	lines = file.readlines()
 
 	cmds = [];
@@ -39,7 +40,7 @@ def add():
 	name = sys.argv[2]
 	exeName = sys.argv[3]
 	path = sys.argv[4]
-	file = open('config.txt', 'a')
+	file = open(DIR + '/config.txt', 'a')
 	file.writelines('%s %s %s\n' % (name, exeName, path))
 	file.close()
 
@@ -48,10 +49,10 @@ def delete():
 		print 'format \'delete|d [name]\''
 		return
 	name = sys.argv[2]
-	with open("config.txt","r") as r:
+	with open(DIR + "/config.txt","r") as r:
 	    lines = r.readlines()
 
-	with open("config.txt","w") as w:
+	with open(DIR + "/config.txt","w") as w:
 	    for line in lines:
 	        if line.split(" ")[0].lower() == name.lower():
 	            continue
@@ -64,11 +65,11 @@ def set():
 	name = sys.argv[2]
 	exeName = sys.argv[3]
 	path = sys.argv[4]
-	with open("config.txt","r") as r:
+	with open(DIR + "/config.txt","r") as r:
 	    lines = r.readlines()
 
 	res = False
-	with open("config.txt","w") as w:
+	with open(DIR + "/config.txt","w") as w:
 	    for line in lines:
 	        if line.split(" ")[0].lower() == name.lower():
 	        	w.write('%s %s %s\n' % (name, exeName, path))
