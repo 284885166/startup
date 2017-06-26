@@ -5,7 +5,7 @@
 ```git
 git clone https://github.com/284885166/startup.git
 ```
-#进入工程目录执行以下命令，如果需要全局使用命令则要配置环境变量
+# 进入工程目录执行以下命令，如果需要全局使用命令则要配置环境变量
 ```shell
 startup list 查询可运行的程序列表
 startup add [name] [exeName] [path] 添加一条可运行程序
