@@ -1,3 +1,4 @@
 QQ QQ.exe D:\Program Files (x86)\Tencent\QQ\Bin
 WX WeChat.exe D:\Program Files (x86)\Tencent\WeChat
 JST Start.exe D:\Program Files (x86)\Netease\NetEase EIM
+idea idea64.exe D:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.2.4\bin
